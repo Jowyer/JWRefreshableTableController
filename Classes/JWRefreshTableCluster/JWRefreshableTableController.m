@@ -121,7 +121,7 @@
 
 -(void)doneRefreshingTableViewData
 {
-    NSLog(@"doneRefreshingTableViewData");
+//    NSLog(@"doneRefreshingTableViewData");
     isReloading = NO;
     
     [self.tableView reloadData];

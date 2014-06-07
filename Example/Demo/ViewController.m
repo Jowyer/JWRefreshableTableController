@@ -25,7 +25,7 @@
     // After definition, [super viewDidLoad];
     [super viewDidLoad];
     
-    tableCellCount = 4;
+    tableCellCount = 10;
 }
 
 #pragma mark- Inherited Methods
