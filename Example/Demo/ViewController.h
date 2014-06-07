@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JWRefreshableTableController.h"
 
-@interface ViewController : UIViewController
+// Inherit from JWRefreshableTableController
+@interface ViewController : JWRefreshableTableController
 
 @end

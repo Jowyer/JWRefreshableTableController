@@ -13,17 +13,53 @@
 @end
 
 @implementation ViewController
+{
+    int tableCellCount;
+}
 
 - (void)viewDidLoad
 {
+    // Define if tableview has header? footer?
+    [self defineExistenceOfHeader:YES Footer:YES];
+    
+    // After definition, [super viewDidLoad];
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    tableCellCount = 4;
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark- Inherited Methods
+// When there is a Header
+-(void)headerViewBeginsRefreshing;
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSLog(@"headerViewBeginsRefreshing...");
+    [self performSelector:@selector(doneRefreshingTableViewData) withObject:nil afterDelay:2];
 }
 
+// When there is a Footer
+-(void)footerViewBeginsRefreshing
+{
+    NSLog(@"footerViewBeginsRefreshing...");
+    tableCellCount += 2;
+    [self performSelector:@selector(doneRefreshingTableViewData) withObject:nil afterDelay:2];
+}
+
+#pragma mark- TableView Delegate & DataSource
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 40;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return tableCellCount;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CELL"];
+    cell.contentView.backgroundColor = [UIColor grayColor];
+    return cell;
+}
 @end
