@@ -28,9 +28,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "EGOViewCommon.h"
 
-@interface EGORefreshTableHeaderView : UIView {
-	
-	id _delegate;
+@interface EGORefreshTableHeaderView : UIView
+{
 	EGOPullRefreshState _state;
 
 	UILabel *_lastUpdatedLabel;
@@ -41,7 +40,7 @@
 
 }
 
-@property(nonatomic,assign) id <EGORefreshTableDelegate> delegate;
+@property(nonatomic,weak) id <EGORefreshTableDelegate> delegate;
 
 - (void)setState:(EGOPullRefreshState)aState;
 

@@ -28,20 +28,17 @@
 #import <QuartzCore/QuartzCore.h>
 #import "EGOViewCommon.h"
 
-@interface EGORefreshTableFooterView : UIView {
-	
-	id _delegate;
+@interface EGORefreshTableFooterView : UIView
+{
 	EGOPullRefreshState _state;
 
 	UILabel *_lastUpdatedLabel;
 	UILabel *_statusLabel;
 	CALayer *_arrowImage;
 	UIActivityIndicatorView *_activityView;
-	
-
 }
 
-@property(nonatomic,assign) id <EGORefreshTableDelegate> delegate;
+@property(nonatomic,weak) id <EGORefreshTableDelegate> delegate;
 
 - (id)initWithFrame:(CGRect)frame arrowImageName:(NSString *)arrow textColor:(UIColor *)textColor;
 
