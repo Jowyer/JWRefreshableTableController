@@ -6,7 +6,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = "JWRefreshableTableController"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "TableView with Pull-Refresh & Load-More."
   s.description      = "TableView with Pull-Refresh & Load-More. ARC compatible. Modified with EGORefreshCluster."
   s.homepage         = "https://github.com/Jowyer/JWRefreshableTableController"
