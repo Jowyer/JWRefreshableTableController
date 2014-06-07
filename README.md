@@ -1,4 +1,5 @@
 # JWRefreshableTableController
+TableView with Pull-Refresh & Load-More. ARC compatible. Modified with EGORefreshCluster.
 
 [![Version](https://img.shields.io/cocoapods/v/JWRefreshableTableController.svg?style=flat)](http://cocoadocs.org/docsets/JWRefreshableTableController)
 [![License](https://img.shields.io/cocoapods/l/JWRefreshableTableController.svg?style=flat)](http://cocoadocs.org/docsets/JWRefreshableTableController)
@@ -9,6 +10,7 @@
 To run the example project; clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+`iOS: 6.0 and above`
 
 ## Installation
 
@@ -17,9 +19,9 @@ it, simply add the following line to your Podfile:
 
     pod "JWRefreshableTableController"
 
-## Author
+## Thanks to
 
-Jowyer, jowyer@gmail.com
+[enormego](https://github.com/enormego)
 
 ## License
 
