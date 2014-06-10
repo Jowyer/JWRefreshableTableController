@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Classes/JWRefreshTableCluster/*'
-  s.ios.resource_bundles  = { 'JWRefreshableTableController-iOS' => ['Classes/Localization/*.lproj'] }
+  s.ios.resource_bundles  = { 'JWRefreshableTableController' => ['Classes/Localization/*.lproj'] }
 
   s.ios.exclude_files = 'Classes/osx'
   s.osx.exclude_files = 'Classes/ios'
